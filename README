@@ -1,1 +1,5 @@
 prepare the input catalogue for the LAMOST moderate resolution survey
+
+notes:
+1) CATALOG.CSV, CONFIG.INI, SELECT_GUIDE_STAR.CFG will be ignored to synchronize
+put these files in for_sss/
