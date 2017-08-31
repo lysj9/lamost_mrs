@@ -6,6 +6,7 @@ a.out
 *.d
 *.txt
 *.dat
+*.fits
 *.csv
 *.CSV
 *.ini
