@@ -1,0 +1,15 @@
+.*.swp
+*.o
+*.obj
+*.exe
+a.out
+*.d
+*.txt
+*.dat
+*.csv
+*.CSV
+*.ini
+*.INI
+*.cfg
+*.CFG
+.DS_Store
