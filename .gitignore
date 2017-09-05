@@ -4,6 +4,7 @@
 *.exe
 a.out
 *.d
+*.pyc
 *.txt
 *.dat
 *.fits

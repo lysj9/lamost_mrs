@@ -1,7 +1,7 @@
 # this is the script for LAMOST-RMS input catalog
 
 import sys
-sys.path.append('../util/')
+sys.path.append('../../util/')
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,8 +19,8 @@ import gcirc
 #fn_gaia = dpath_Inp + "gaia/base/base.fits"
 #fn_out = dpath_Outp + "ASS2SSS1.TXT"
 #fn_inp = dpath_Outp + "CATALOG.csv"
-finput = './Test_SeptOct/Input_source/JiangDengKai/region_plane_new.fits'
-fgaia = '../catalogue/gaia/base/base.fits'
+finput = '../../../Test_SeptOct/Input_source/JiangDengKai/region_plane_new.fits'
+fgaia = '../../../../catalogue/gaia/base/base.fits'
 
 # --------------------------------------------------
 # read catalog from input catalog 
@@ -146,17 +146,17 @@ sid1 = t1_sub['source_id']
 g1 = t1_sub['phot_g_mean_mag']
 pri1 = t1_sub['priority']
 idx = (pri1 <= 30)
-pri1[idx] = pri1[idx] - 10
-idx = (pri1 > 30) * (pri1 < 60)
-pri1[idx] = pri1[idx] - 20
+pri1[idx] = 1
+idx = (pri1 > 30) * (pri1 <= 60)
+pri1[idx] = 2
 idx = (pri1 > 60)
-pri1[idx] = pri1[idx] - 30
+pri1[idx] = 3
 
 ra2 = t['ra']
 dec2 = t['dec']
 sid2 = t['source_id']
 g2 = t['phot_g_mean_mag']
-pri2 = np.array([60]*len(t))
+pri2 = np.array([4]*len(t))
 
 source_id = np.hstack([sid1, sid2])
 ra = np.hstack([ra1, ra2])
